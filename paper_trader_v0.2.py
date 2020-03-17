@@ -1,4 +1,4 @@
-
+# Version 0.2
 # This is the file for the actual
 # portfolio
 # CJG Projects
