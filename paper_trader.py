@@ -44,15 +44,18 @@ print(total_profit)
 
 while xyz.lower() != "yes":
     xyz = input("Continue? ")
+    print("\n")
 
 # ------------------------------------- Commands to Sell/Buy Same Stocks to Portfolio --------------------------------
 
-time.sleep(1)
 active = input("Do you want to sell or buy any of your currently held stocks? (yes or no) \n")
+if active.lower() != "yes":
+    print("\n")
+    print("Okay you have chosen not to add any stocks....")
+    time.sleep(1)
 while active.lower() == "yes":
     whichstock = input("\n Which Stock would you like to buy/sell? (must be in your current portfolio.) \n "
                        "Additional stocks can be added later. \n")
-    # if port['stocks'].str.contains(str(whichstock).lower()):
     try:
         buy_or_sell = input("Do you wish to buy or sell the stock? \n")
         quantity = input("Please put in the quantity you wish to purchase/sell: \n")
@@ -78,11 +81,10 @@ while active.lower() == "yes":
             print("\nYou must enter buy or sell. Restarting section...")
     except:
         print("\n Not in Portfolio Error.  Try again.....")
-    # else:
     active = input("\n Do you want to sell or buy any additional of your current stocks? (yes or no) ")
 
 
-time.sleep(1)
+port.round(0)
 print("Updated Portfolio: \n \n")
 print(port)
 
