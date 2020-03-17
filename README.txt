@@ -18,3 +18,14 @@ FUTURE PLANS FOR IMPROVEMENT:
 - I plan to add a “load by chunk” option.  Just to make it easier to see a larger (and therefore more realistic) portfolio 
 
 - Efficiency improvement.  If you look at the code, I could speed things up (for example by only getting the live prices once) so I plan to do that to perfect my efficiency in coding.  
+
+
+VERSION HISTORY:
+
+0.2 ~ Fixed bugs and some extra text
+ Fixed the binary number calculation issues
+ Added in text if you choose not to change profolio, so the program doesn't just terminate
+
+
+0.1 ~ First attempt
+ Built Paper Trader
