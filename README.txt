@@ -5,17 +5,15 @@ Welcome to my Paper Trading Python Program.  It is super user friendly and self-
 When you run the Python file, the csv must:
 	a) Still be a csv.  You can edit it but always save it to csv (not excel or whatever else)
 	b) Be in the SAME folder as the python code you are running
-That is it! The rest is self explanatory when you run the program.  It explains everything.
-
-NOTE FOR CUSTOMIZING THE PORTFOLIO:
-You can edit the csv yourself to get your self set up with whatever stocks you want to begin.  Nothing crazy or hard, just keep it formatted like the original csv and it should work fine!
+	
+That is it! The rest is self explanatory when you run the program.  It explains everything.  
 
 
 FUTURE PLANS FOR IMPROVEMENT:
 
-- You will probably notice that after large amounts of buying and selling, some small cents may be added or subtracted to the large numbers.  Just an issue with computer computation and binary numbers, thats a fix I will make.
+- I will likely make a branch that has a simple algorithmic trader bot that using moving averages.  It will be an extension on this code without the buy/sell option (since it would be done by the bot).
 
-- I plan to add a “load by chunk” option.  Just to make it easier to see a larger (and therefore more realistic) portfolio 
+- I may add a program that scrapes other financial information.  The idea was brought up to you about Quarter Reports.
 
 - Efficiency improvement.  If you look at the code, I could speed things up (for example by only getting the live prices once) so I plan to do that to perfect my efficiency in coding.  
 
