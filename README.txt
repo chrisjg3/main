@@ -22,6 +22,13 @@ FUTURE PLANS FOR IMPROVEMENT:
 
 VERSION HISTORY:
 
+1.0 ~ First Complete Version of Paper Trader
+ Added and moved forward 'stock adding' part of code - Can now add stocks that have never been added before by abbreviation
+ Program now starts with showing porfolio and live prices of stocks, then allows expanding portfolio, then buy/sell stocks
+ Fixed minor rounding error bug
+
+----
+
 0.2 ~ Fixed bugs and some extra text
  Fixed the binary number calculation issues
  Added in text if you choose not to change profolio, so the program doesn't just terminate
