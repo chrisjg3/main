@@ -34,6 +34,7 @@ for each in port['stock']:
 port['value_now'] = port['live_price'] * port['quantity']
 port['loss/gain'] = port['current_invest'] + port['value_now']
 
+port = port.round(0)
 print(port)
 
 total_profit = port['loss/gain'].sum()
