@@ -1,7 +1,6 @@
-
-# This is the file for the actual
-# portfolio
+# Python Code for Paper Trader
 # CJG Projects
+# Python 3.8
 
 import pandas as pd
 import pandas_datareader.data as web
