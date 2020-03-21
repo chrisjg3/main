@@ -21,6 +21,7 @@ port = pd.read_csv('my_stock.csv')
 i = 0
 xyz = ""
 pd.options.mode.chained_assignment = None
+print("Trading Bot Not Currently Active - Check Other Branch \n")
 
 
 
