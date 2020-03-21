@@ -6,7 +6,9 @@ When you run the Python file, the csv must:
 	a) Still be a csv.  You can edit it but always save it to csv (not excel or whatever else)
 	b) Be in the SAME folder as the python code you are running
 	
-That is it! The rest is self explanatory when you run the program.  It explains everything.  
+That is it! The rest is self explanatory when you run the program.  
+
+Note on doing puts on stocks:  Shorting stocks is possible with the program (by having a negative quanitity), which isn't exactly how short positions work, but for the time being I am going to keep it that way to keep the program simple to use.
 
 
 FUTURE PLANS FOR IMPROVEMENT:
@@ -22,7 +24,7 @@ VERSION HISTORY:
 
 1.0.1 ~ Very minor improvements
  Fixed an additional rounding error that was not completely patched by last fix.
- Reogranized name to let version lead, just for less confusion.
+ Re-organized name to let version lead, just for less confusion.
 
 1.0 ~ First Complete Version of Paper Trader
  Added and moved forward 'stock adding' part of code - Can now add stocks that have never been added before by abbreviation
