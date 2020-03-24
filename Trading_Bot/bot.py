@@ -1,5 +1,6 @@
 # CJG Projects ~ Trading Bot
 # Python 3
+# Still a work in progress, but the basic skeleton is there.
 
 import pandas as pd
 import pandas_datareader.data as web
