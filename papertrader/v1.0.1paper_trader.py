@@ -1,6 +1,7 @@
 # Python Code for Paper Trader
 # CJG Projects
 # Python 3.8
+# Paper Trader Version 1.0.1
 
 import pandas as pd
 import pandas_datareader.data as web
