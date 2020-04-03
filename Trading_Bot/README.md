@@ -1,4 +1,4 @@
-# Hello! Welcome to my algorythmic trader!
+# Hello! Welcome to my algorithmic trader!
 
 This is the branch that will contain the bots I build for paper trading.
 The bot is close, but not currently functional. 
