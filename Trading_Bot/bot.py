@@ -96,7 +96,7 @@ def buy_stock(row):
         row = (max_amount * 2) + 1
     order_amount = max_amount / row
     order_amount = round(order_amount, 0)
-    print(order_amount)
+    return int(order_amount)
 
 
 # ------------------------------------- Trading Bot Code -------------------------------------
@@ -107,7 +107,7 @@ print('\n \n \n')
 for row in pd.read_csv('my_stock.csv', chunksize=1):
     if row['50ma'] > row['100ma']:
         for price in row['live_price']:
-            buy_stock(price)
+            quantity = quantity + buy_stock(price)
 
 print('after bot')
 print(port)
