@@ -1,5 +1,7 @@
 # Welcome to my Paper Trading Python Program!
 
+### Note: I am currently learning advanced OOP, which should greatly improve this code and the trading bot. I want to note that because it is a major improvement that I am currently working on.
+
 It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  There is only two things you need to do to get this running.
 
 When you run the Python file, the csv must:
