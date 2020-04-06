@@ -1,5 +1,7 @@
 # Hello! Welcome to my algorithmic trader!
 
+### NOTE: See Paper Trader README.  This code is missing OOP to be more effective, and I am currently working on that.
+
 This is the branch that will contain the bots I build for paper trading.
 The bot is close, but not currently functional. 
 
