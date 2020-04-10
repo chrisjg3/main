@@ -1,6 +1,6 @@
 # Welcome to my Paper Trading Python Program!
 
-### Note: I am currently learning advanced OOP, which should greatly improve this code and the trading bot. I want to note that because it is a major improvement that I am currently working on.
+### Note: I am currently learning advanced OOP, the most recent branch (for trader bot 0.4) shows the best version with some methods and classes to enhance my code.  I haven't added much object programming to the main paper trader yet.
 
 It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  There is only two things you need to do to get this running.
 
