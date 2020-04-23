@@ -1,7 +1,5 @@
 # Welcome to my Paper Trading Python Program!
 
-### Note: I am currently learning advanced OOP, the most recent branch (for trader bot 0.4) shows the best version with some methods and classes to enhance my code.  I haven't added much object programming to the main paper trader yet.
-
 It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  There is only two things you need to do to get this running.
 
 When you run the Python file, the csv must:
@@ -21,11 +19,15 @@ Soon I will have it so that the program adds the stock to the csv if it isn't al
 
 ## FUTURE PLANS FOR IMPROVEMENT:
 
-- As mentioned above, I will make the program a bit more user friendly by having the program add stocks autotically if they have never been in the csv, rather then. asking the user, which isn't really necessary.
+### NOTE: This code is very old (as in before I learned a lot of what I know now) so I am in the process of updating it to more normal standards.
+
+- Changing code to OOP
+
+- Adding a GUI
+
+- As mentioned above, I will make the program a bit more user friendly by having the program add stocks autotically if they have never been in the csv, rather then asking the user, which isn't really necessary.
 
 - I may add a program that scrapes other financial information.  The idea was brought up to you about Quarter Reports.
-
-- Efficiency improvement.  If you look at the code, I could speed things up (for example by only getting the live prices once) so I plan to do that to perfect my efficiency in coding.  
 
 
 VERSION HISTORY:
