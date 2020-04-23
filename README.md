@@ -1,56 +1,72 @@
 # Welcome to my Paper Trading Python Program!
 
-### Note: I am currently learning advanced OOP, the most recent branch (for trader bot 0.4) shows the best version with some methods and classes to enhance my code.  I haven't added much object programming to the main paper trader yet.
-
-It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  There is only two things you need to do to get this running.
-
-When you run the Python file, the csv must:
-	a) Still be a csv.  You can edit it but always save it to csv (not excel or whatever else)
-	b) Be in the SAME folder as the python code you are running
-	
-That is it! The rest is self explanatory when you run the program.  
-
-## A few notes about the program:
-
-1. I want to explain why the program asks if you want to add stocks that 'weren't previously in the portfolio.' I have it currently where each csv row is stock.  Once you have added a stock that row is there forever, even if you sell all yout stock.  
-
-Soon I will have it so that the program adds the stock to the csv if it isn't already there, but for now it is a seperate seciton.
-
-2. Shorting stocks is possible with the program (by having a negative quanitity), which isn't exactly how short positions work, but for the time being I am going to keep it that way to keep the program simple to use.
+It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  
 
 
-## FUTURE PLANS FOR IMPROVEMENT:
+## Coming Features:
 
-- As mentioned above, I will make the program a bit more user friendly by having the program add stocks autotically if they have never been in the csv, rather then. asking the user, which isn't really necessary.
+I am revisiting this code after spending a while on other projects.  It is currently very disorganized and inefficient (since it was built when I was first learning Python.)
 
-- I may add a program that scrapes other financial information.  The idea was brought up to you about Quarter Reports.
+The paper trader does work, but expect a lot of changes and rearrangements in the coming weeks.
 
-- Efficiency improvement.  If you look at the code, I could speed things up (for example by only getting the live prices once) so I plan to do that to perfect my efficiency in coding.  
+I will be dividing up the code to help with debugging, adding a GUI, and changing how the program runs to stop the redudencies.  
 
 
-VERSION HISTORY:
-```
-1.0.1 ~ Very minor improvements
- Fixed an additional rounding error that was not completely patched by last fix.
- Re-organized name to let version lead, just for less confusion.
-```
+## Using the program:
 
-```
-1.0 ~ First Complete Version of Paper Trader
- Added and moved forward 'stock adding' part of code - Can now add stocks that have never been added before by abbreviation
- Program now starts with showing porfolio and live prices of stocks, then allows expanding portfolio, then buy/sell stocks
- Fixed minor rounding error bug
-```
+The program is very user friendly so read the lines that appear and nothing should be too confusing to understand.  You don't need to do anything but run the file.
 
-## ----
+You edit/add/substact from you portfolio inside the program.  There is no need to edit anything else.  
 
-```
-0.2 ~ Fixed bugs and some extra text
- Fixed the binary number calculation issues
- Added in text if you choose not to change profolio, so the program doesn't just terminate
-```
+However, if you want to set up some specific conditions in the CSV or start over you can do so by just editting the CSV yourself.
 
-```
-0.1 ~ First attempt
- Built Paper Trader
-```
+If you want to edit your portfolio and have custom stocks or quanitites (or start over completely) you can edit the CSV.  You just have to keep this in mind:
+
+1. You cannot move the csv file.  The main.py file must be in the same folder as the csv.
+
+2. You must save it as a csv file.  That is what the code looks for.
+
+Other then that you will be fine.  Edit any of the quantities or money yourself to fit whatever need you have.
+
+
+## Installation:
+
+There are two ways to run this paper trader.  One easy way that works on mac computers and one harder way requires some basic knowledge of the terminal /command promt on a mac computer / windows computer.  I have both below:
+
+#### Easiest way to run:
+
+Download this repository onto your computer.
+
+Open a finder window and open the downloaded folder so you see the main.py file. 
+
+Open Terminal and type python3
+Then hit enter.
+
+Then go to the finder window and drag the main.py file into the terminal.  
+
+(You should see a path appear, something that looks like user/Downloads/paper_trader/main.py)
+
+Hit enter
+
+This should run the program.
+
+
+#### Slightly harder way that requires terminal knowledge:
+
+Download this repository onto your computer.
+
+Open a finder window and open the downloaded folder so you see the main.py file. 
+
+Open the command prompt (Terminal) and type Python3
+
+Insert the path to the main.py file and hit enter
+
+This should run the program.
+
+
+## Other Notes:
+
+Read the READMEs in the individual folders for more information.  Each has a version history and some extra information, including what I am working on within it.
+
+It is more backend notes then user notes, so if you are just interested in running the program that is all you need.
+

@@ -1,9 +1,15 @@
-# Hello! Welcome to my algorithmic trader!
+# Welcome to my algorithmic trader!
 
-### NOTE: See Paper Trader README.  This code is missing OOP to be more effective, and I am currently working on that.
+This project is not yet complete and is currently not functional.
+However, the code is pretty clear and can be read to understand how it will work.
 
-This is the branch that will contain the bots I build for paper trading.
-The bot is close, but not currently functional. 
+
+## Installation:
+
+This file will work when it is run from a command file in the above directory. I will not expand this section as this file will eventually be only a backend file and will not be something for users to look at (let alone fine installation instructions on).
+
+This section is only here for now because a proper installation section doesn't exist in the project README.
+
 
 
 ## VERSION HISTORY:
