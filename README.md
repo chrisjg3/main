@@ -2,7 +2,6 @@
 
 It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  
 
-
 ## Coming Features:
 
 I am revisiting this code after spending a while on other projects.  It is currently very disorganized and inefficient (since it was built when I was first learning Python.)
@@ -16,11 +15,23 @@ I will be dividing up the code to help with debugging, adding a GUI, and changin
 
 The program is very user friendly so read the lines that appear and nothing should be too confusing to understand.  You don't need to do anything but run the file.
 
+<<<<<<< HEAD
 You edit/add/substact from you portfolio inside the program.  There is no need to edit anything else.  
 
 However, if you want to set up some specific conditions in the CSV or start over you can do so by just editting the CSV yourself.
 
 If you want to edit your portfolio and have custom stocks or quanitites (or start over completely) you can edit the CSV.  You just have to keep this in mind:
+=======
+### NOTE: This code is very old (as in before I learned a lot of what I know now) so I am in the process of updating it to more normal standards.
+
+- Changing code to OOP
+
+- Adding a GUI
+
+- As mentioned above, I will make the program a bit more user friendly by having the program add stocks autotically if they have never been in the csv, rather then asking the user, which isn't really necessary.
+
+- I may add a program that scrapes other financial information.  The idea was brought up to you about Quarter Reports.
+>>>>>>> 5093de54880045858bded8471f7ea1f5705567b3
 
 1. You cannot move the csv file.  The main.py file must be in the same folder as the csv.
 
