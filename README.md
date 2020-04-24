@@ -4,11 +4,11 @@ It is super user friendly and self-explanatory!  It gets live stock prices and i
 
 ## Coming Features:
 
-I am revisiting this code after spending a while on other projects.  It is currently very disorganized and inefficient (since it was built when I was first learning Python.)
+I am revisiting this code after spending a while on other projects.  I am currently in the process of applying my new skills to it.  I have already made it a bit more commented and organized.  I am very excited to split the code up into functionality and make it look great!
 
 The paper trader does work, but expect a lot of changes and rearrangements in the coming weeks.
 
-I will be dividing up the code to help with debugging, adding a GUI, and changing how the program runs to stop the redudencies.  
+I will be dividing up the code to help with debugging/functionality, adding a GUI, and finishing that trading bot.
 
 
 ## Using the program:
