@@ -2,6 +2,8 @@
 
 It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  
 
+(Version History on README in the paperTrader Folder)
+
 ## Coming Features:
 
 I am revisiting this code after spending a while on other projects.  I am currently in the process of applying my new skills to it.  I have already made it a bit more commented and organized.  I am very excited to split the code up into functionality and make it look great!
