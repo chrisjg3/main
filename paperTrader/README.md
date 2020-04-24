@@ -29,7 +29,8 @@ Soon I will have it so that the program adds the stock to the csv if it isn't al
 VERSION HISTORY:
 ```
 1.2 ~ Finally combined the stock adding sections and organized the code!
- Combined the stock adding section with the buying/selling section.  Now asked for stock once and if it isn't in CSV it is automatically grabbed and added.
+ Combined the stock adding section with the buying/selling section.  
+ (Now asked for stock once and if it isn't in CSV it is automatically grabbed and added)
  Added comments to explain the sections in the code
  Helped organize the code a bit more and fix some redundencies.
 ```
