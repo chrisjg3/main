@@ -8,6 +8,9 @@ import datetime as dt
 from datetime import date
 import time
 from yahoo_fin import stock_info as si
+# Going to add for functionality:
+# import sys
+# sys.path.insert(0, '/Users/chrisgallo/PycharmProjects/Computationalwork/test')
 
 
 # ------------------------------------- Commands to Read Portfolio ---------------------------------
