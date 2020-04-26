@@ -1,14 +1,16 @@
 # Python Code for Paper Trader
 # CJG Projects
 # Python 3.8
-# Paper Trader Version 2.0
+# Paper Trader Version 2.0.1
 
 import pandas as pd
-import pandas_datareader.data as web
 import datetime as dt
 from datetime import date
 import time
 from yahoo_fin import stock_info as si
+# Going to add for functionality:
+# import sys
+# sys.path.insert(0, '/Users/chrisgallo/PycharmProjects/Computationalwork/test')
 
 
 # ------------------------------------- Commands to Read Portfolio ---------------------------------
@@ -19,19 +21,14 @@ print("Current Portfolio: ")
 currentDT = dt.datetime.now()
 today = date.today()
 port = pd.read_csv('my_stock.csv')
-i = 0
-xyz = ""
 pd.options.mode.chained_assignment = None
 # print("Trading Bot Not Currently Active - Check Other Branch \n")
 
 
-
+i = 0
 for each in port['stock']:
     port['live_price'][i] = si.get_live_price(each)
     i += 1
-
-
-# print(port)
 
 port['value_now'] = port['live_price'] * port['quantity']
 port['loss/gain'] = port['current_invest'] + port['value_now']
@@ -44,8 +41,9 @@ print("\n")
 print("Total Profit: ")
 print(total_profit)
 
-while xyz.lower() != "yes":
-    xyz = input("Continue? ")
+check_point = ""
+while check_point.lower() != "yes":
+    check_point = input("Continue? ")
     print("\n")
 
 
