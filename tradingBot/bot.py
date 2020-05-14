@@ -8,20 +8,20 @@ import datetime as dt
 from datetime import date
 import time
 from yahoo_fin import stock_info as si
-import matplotlib.pyplot as plt
-from matplotlib import style
+# import matplotlib.pyplot as plt
+# from matplotlib import style
 
 # ------------------------------------- Commands to Read Portfolio ---------------------------------
 
 print("Algorithmic Trading Bot - CJG")
 currentDT = dt.datetime.now()
 today = date.today()
-port = pd.read_csv('bot_stock.csv')
+port = pd.read_csv('tradingBot/bot_stock.csv')
 i = 0
 xyz = ""
 pd.options.mode.chained_assignment = None
 
-style.use('ggplot')
+# style.use('ggplot')
 
 hundred_days = dt.timedelta(100)
 fifty_days = dt.timedelta(50)
@@ -55,7 +55,7 @@ while xyz != "yes":
 # ------------------------------------- Customizing Bot and Portfolio -------------------------------------
 print("\n \nBot Customization\n \n")
 
-addingstock_answer = input("Would you like to add any stocks to the portfolio that are not currently in it? \n (yes or no) \n ")
+addingstock_answer = input("Would you like the trading bot to look into any additional stocks? \n (yes or no) \n ")
 while addingstock_answer.lower() == "yes":
     stockabbrev = input("\nWhat is the abbreviation of the stock? \n")
     to_add = pd.DataFrame(
@@ -76,13 +76,13 @@ while customize_option != "no":
         print("Max remains 1000")
     print("\n \n")
     allow_shorts = input("Would you like the bot to be able to short stock? \n"
-                         "Keep in mind, puts in this paper trader don't work exactly like puts in the real world. \n")
+                         "(puts in this paper trader don't work exactly like puts in the real world) \n")
     if allow_shorts.lower() == "yes":
         shorts_on = True
     elif allow_shorts.lower() == "no":
         shorts_on = False
     else:
-        print("Invalid answer: set to false")
+        print("Invalid answer: Bot will not be allowed to short.")
         shorts_on = False
     customize_option = input("Continue to customize?")
 
