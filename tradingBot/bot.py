@@ -16,7 +16,7 @@ from matplotlib import style
 print("Algorithmic Trading Bot - CJG")
 currentDT = dt.datetime.now()
 today = date.today()
-port = pd.read_csv('my_stock.csv')
+port = pd.read_csv('bot_stock.csv')
 i = 0
 xyz = ""
 pd.options.mode.chained_assignment = None
