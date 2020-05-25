@@ -1,31 +1,3 @@
-# Paper Trading Section
-
-
-## THIS README IS A BIT OUT OF DATE:
-
-I started shortly after first learning coding.  I have decided to revisit the project and make the program much better and have the repisotrty more optimized for debugging and adding features.
-
-I am doing those first before editting this README, so take all the following text with a grain of salt.
- 
-
-## A few notes about the program:
-
-1. I want to explain why the program asks if you want to add stocks that 'weren't previously in the portfolio.' I have it currently where each csv row is stock.  Once you have added a stock that row is there forever, even if you sell all yout stock.  
-
-Soon I will have it so that the program adds the stock to the csv if it isn't already there, but for now it is a seperate seciton.
-
-2. Shorting stocks is possible with the program (by having a negative quanitity), which isn't exactly how short positions work, but for the time being I am going to keep it that way to keep the program simple to use.
-
-
-## FUTURE PLANS FOR IMPROVEMENT:
-
-- As mentioned above, I will make the program a bit more user friendly by having the program add stocks autotically if they have never been in the csv, rather then. asking the user, which isn't really necessary.
-
-- I may add a program that scrapes other financial information.  The idea was brought up to you about Quarter Reports.
-
-- Efficiency improvement.  If you look at the code, I could speed things up (for example by only getting the live prices once) so I plan to do that to perfect my efficiency in coding.  
-
-
 VERSION HISTORY:
 ```
 2.0.1 ~ PEP8 Improvements
