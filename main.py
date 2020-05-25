@@ -8,9 +8,8 @@ import datetime as dt
 from datetime import date
 import time
 from yahoo_fin import stock_info as si
-# Going to add for functionality:
-# import sys
-# sys.path.insert(0, '/Users/chrisgallo/PycharmProjects/Computationalwork/test')
+# Below this is modules imported from within this package
+from paperTrader import update_portfolio as up
 
 
 # ------------------------------------- Commands to Read Portfolio ---------------------------------
@@ -18,28 +17,11 @@ from yahoo_fin import stock_info as si
 print("Stock Software - CJG")
 time.sleep(1)
 print("Current Portfolio: ")
-currentDT = dt.datetime.now()
-today = date.today()
-port = pd.read_csv('my_stock.csv')
 pd.options.mode.chained_assignment = None
-# print("Trading Bot Not Currently Active - Check Other Branch \n")
 
 
-i = 0
-for each in port['stock']:
-    port['live_price'][i] = si.get_live_price(each)
-    i += 1
+port = up.update_port()
 
-port['value_now'] = port['live_price'] * port['quantity']
-port['loss/gain'] = port['current_invest'] + port['value_now']
-
-port = port.round(0)
-print(port)
-
-total_profit = port['loss/gain'].sum()
-print("\n")
-print("Total Profit: ")
-print(total_profit)
 
 check_point = ""
 while check_point.lower() != "yes":
