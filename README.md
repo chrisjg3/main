@@ -1,27 +1,23 @@
 # Welcome to my Paper Trading Python Program!
 
-It is super user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  
-
+It is user friendly and self-explanatory!  It gets live stock prices and it keeps track of your earnings!  
 (Version History on README in the paperTrader Folder)
 
 ## Coming Features:
 
-I am revisiting this code after spending a while on other projects.  I am currently in the process of applying my new skills to it.  I have already made it a bit more commented and organized.  I am very excited to split the code up into functionality and make it look great!
+I am revisiting this code after spending a while on other projects.  I am currently in the process of applying my new skills to it.  I am currently trying to make it conform more to PEP8 conventions. 
 
-The paper trader does work, but expect a lot of changes and rearrangements in the coming weeks.
+The main paper trading program has been broken down by functionality, I am hoping to do this as well to the trading bot code. It isn't espcially long, but I am doing this for practice of conventions.
 
-I will be dividing up the code to help with debugging/functionality, adding a GUI, and finishing that trading bot.
-
+Next features will be adding a GUI and finishing that trading bot.
 
 ## Using the program:
 
-The program is very user friendly so read the lines that appear and nothing should be too confusing to understand.  You don't need to do anything but run the file.
+The program is very user friendly so read the lines that appear and nothing should be too confusing to understand.  You don't need to do anything but run the main.py file.
 
-You edit/add/substact from you portfolio inside the program.  There is no need to edit anything else.  
+You edit/add/substact from you portfolio inside the program, just input the correct stock abreviation and the program will fetch the correct information.  There is no need to edit anything else.  
 
-However, if you want to set up some specific conditions in the CSV or start over you can do so by just editting the CSV yourself.
-
-If you want to edit your portfolio and have custom stocks or quanitites (or start over completely) you can edit the CSV.  You just have to keep this in mind:
+However, if you want to set up some specific conditions in the CSV or start over you can do so by just editting the CSV yourself. If you choose to do this, there are a few things to keep in mind:
 
 1. You cannot move the csv file.  The main.py file must be in the same folder as the csv.
 
@@ -32,7 +28,7 @@ Other then that you will be fine.  Edit any of the quantities or money yourself 
 
 ## Installation:
 
-There are two ways to run this paper trader.  One easy way that works on mac computers and one harder way requires some basic knowledge of the terminal /command promt on a mac computer / windows computer.  I have both below:
+Running the main.py file is all you need to run the program, this section is more for those without the knowledge on how to easily do this. 
 
 #### Easiest way to run:
 
@@ -48,19 +44,6 @@ Then go to the finder window and drag the main.py file into the terminal.
 (You should see a path appear, something that looks like user/Downloads/paper_trader/main.py)
 
 Hit enter
-
-This should run the program.
-
-
-#### Slightly harder way that requires terminal knowledge:
-
-Download this repository onto your computer.
-
-Open a finder window and open the downloaded folder so you see the main.py file. 
-
-Open the command prompt (Terminal) and type Python3
-
-Insert the path to the main.py file and hit enter
 
 This should run the program.
 
