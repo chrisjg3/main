@@ -28,6 +28,18 @@ Soon I will have it so that the program adds the stock to the csv if it isn't al
 
 VERSION HISTORY:
 ```
+2.0.1 ~ PEP8 Improvements
+ Impvoed from commenting and code structure
+```
+
+```
+2.0 ~ Divide Code into seperate files
+ Not many features added, but the code architecture is very different
+ Code now broken down by functionality
+ Some speed improvement from removing some redudency
+```
+
+```
 1.2 ~ Finally combined the stock adding sections and organized the code!
  Combined the stock adding section with the buying/selling section.  
  (Now asked for stock once and if it isn't in CSV it is automatically grabbed and added)
