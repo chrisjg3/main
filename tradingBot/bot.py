@@ -18,10 +18,8 @@ currentDT = dt.datetime.now()
 today = date.today()
 port = pd.read_csv('tradingBot/bot_stock.csv')
 i = 0
-xyz = ""
+wait_to_continue = ""
 pd.options.mode.chained_assignment = None
-
-# style.use('ggplot')
 
 hundred_days = dt.timedelta(100)
 fifty_days = dt.timedelta(50)
@@ -36,7 +34,7 @@ for each in port['stock']:
     port['live_price'][i] = si.get_live_price(each)
     i += 1
 
-print(port)        #I seperated caluclating the 'live price' out so that the portfolio can be viewed while the 100ma and 50ma are calculated.
+print(port)      
 
 for each in port['stock']:
     df = web.DataReader(each, 'yahoo', start, end)['Adj Close']
@@ -48,9 +46,9 @@ for each in port['stock']:
 
 print(port)
 
-while xyz != "yes":
+while wait_to_continue != "yes":
     print("\n \n")
-    xyz = input("Continue? \n")
+    wait_to_continue = input("Continue? \n")
 
 # ------------------------------------- Customizing Bot and Portfolio -------------------------------------
 print("\n \nBot Customization\n \n")

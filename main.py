@@ -1,4 +1,4 @@
-# Python Code for Paper Trader
+# Paper Trader
 # CJG Projects
 # Python 3.8
 # Paper Trader Version 2.0.1
@@ -59,11 +59,13 @@ if active.lower() == "no":
 while active.lower() == "yes":
     whichstock = input("\n Type the abbreviation of the stock you would like to buy or sell. \n Stock Abbreviation: ")
 
-    for each in port['stock']:  # Checking for if the stock has been added in the past
+    # This first checks if the stock has been added in the past
+    for each in port['stock']:  
         if each == whichstock:
             found_stock = True
     
-    if found_stock == False:  # This is the section for if the stock isn't in the portfolio.  This code adds it.
+    # This adds the stock abbrevaition to the csv, if it as never been added in the past.
+    if found_stock == False: 
         to_add = pd.DataFrame(
         {'stock': [whichstock], 'live_price': [si.get_live_price(whichstock)], 'quantity': [0], 'value_now': [0], 'current_invest': [0],
          'loss/gain': [0]})
@@ -93,7 +95,7 @@ while active.lower() == "yes":
     else:
         print("\nYou must enter buy or sell. Restarting section...")
 
-    # Asking to begin loop again:
+    # This line is asking to begin loop again:
     active = input("\n Do you want to sell or buy any additional of your current stocks? (yes or no) ") 
 
 
