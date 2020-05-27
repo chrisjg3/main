@@ -2,3 +2,4 @@
 my_stock.csv
 my_stock
 .vscode
+*.pyc
