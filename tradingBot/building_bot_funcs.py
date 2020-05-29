@@ -8,7 +8,7 @@ port = pd.read_csv('tradingBot/test_stock.csv')
 
 # Only part needed for trade bot is functions for buy and sell
 fifty_mma = [1250, 662, 134, 400]
-hundred_mma = [1277, 602, 172, 391]
+hundred_mma = [1107, 602, 172, 391]
 
 port['50ma'] = fifty_mma
 port['100ma'] = hundred_mma
@@ -18,7 +18,7 @@ port['100ma'] = hundred_mma
 # fifty_days = dt.timedelta(50)
 # end = dt.datetime.now()
 # start = end - hundred_days
-# max_amount = 1000.0
+money_sunk = -10000.0   # A better name for this might be limit, as we are setting it as an investment limit. Also it is negative
 
 # for each in port['stock']:
 #     df = web.DataReader(each, 'yahoo', start, end)['Adj Close']
@@ -36,17 +36,24 @@ print("\n\n")
 
 
 def buy_stock(port):
+    global money_sunk
     which_index = 0
     for each in port['100ma']:
         if each * 1.05 <= port['50ma'][which_index]:
-            #WILL BUY!
-            port['live_price'][which_index] = 0
+            # If a stock has a signficantly higher 50ma then 100ma, we will buy, but only if not at limit.
+            if port['current_invest'][which_index] > money_sunk:
+                room_to_invest = port['current_invest'][which_index] - money_sunk
+                order_quantity = room_to_invest // port['live_price'][which_index]
+                if order_quantity != 0:
+                    port['quantity'][which_index] = port['quantity'][which_index] + order_quantity
+                    port['current_invest'][which_index] = port['current_invest'][which_index] - (order_quantity * port['live_price'][which_index])
         which_index += 1
+    port['value_now'] = port['live_price'] * port['quantity']
     return port
 
 
 
-# port = buy_stock(port)
+port = buy_stock(port) 
 
 def sell_stock(port):
     which_index = 0
@@ -58,7 +65,7 @@ def sell_stock(port):
     return port
 
 
-port = sell_stock(port)
+# port = sell_stock(port)
 
 print("\n\n This is the manipulated one: \n\n")
 print(port)
