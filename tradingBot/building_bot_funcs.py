@@ -6,7 +6,6 @@ i = 0
 pd.options.mode.chained_assignment = None
 port = pd.read_csv('tradingBot/test_stock.csv')
 
-# Only part needed for trade bot is functions for buy and sell
 # fifty_mma = [1250, 662, 134, 400]
 # hundred_mma = [1107, 602, 172, 391]
 
