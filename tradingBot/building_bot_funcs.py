@@ -7,26 +7,26 @@ pd.options.mode.chained_assignment = None
 port = pd.read_csv('tradingBot/test_stock.csv')
 
 # Only part needed for trade bot is functions for buy and sell
-fifty_mma = [1250, 662, 134, 400]
-hundred_mma = [1107, 602, 172, 391]
+# fifty_mma = [1250, 662, 134, 400]
+# hundred_mma = [1107, 602, 172, 391]
 
-port['50ma'] = fifty_mma
-port['100ma'] = hundred_mma
+# port['50ma'] = fifty_mma
+# port['100ma'] = hundred_mma
 
 
-# hundred_days = dt.timedelta(100)
-# fifty_days = dt.timedelta(50)
-# end = dt.datetime.now()
-# start = end - hundred_days
+hundred_days = dt.timedelta(100)
+fifty_days = dt.timedelta(50)
+end = dt.datetime.now()
+start = end - hundred_days
 money_sunk = -10000.0   # A better name for this might be limit, as we are setting it as an investment limit. Also it is negative
 
-# for each in port['stock']:
-#     df = web.DataReader(each, 'yahoo', start, end)['Adj Close']
-#     df = df.drop(columns=['Date'])
-#     port['hundred_mma'][i] = df.mean()
-#     df = df.tail(50)
-#     port['fifty_mma'][i] = df.mean()
-#     i += 1
+for each in port['stock']:
+    df = web.DataReader(each, 'yahoo', start, end)['Adj Close']
+    df = df.drop(columns=['Date'])
+    port['100ma'][i] = df.mean()
+    df = df.tail(50)
+    port['50ma'][i] = df.mean()
+    i += 1
 
 print("\n\n\n")
 print(port)
@@ -52,20 +52,22 @@ def buy_stock(port):
     return port
 
 
-
-port = buy_stock(port) 
-
 def sell_stock(port):
     which_index = 0
     for each in port['50ma']:
-        if each * 1.05 <= port['100ma'][which_index]:
-            #WILL SELL!
-            port['live_price'][which_index] = 0
+        # If stock is slightly below, it auto sells.
+        if each * 1.03 <= port['100ma'][which_index]:
+            if port['quantity'][which_index] >= 1:
+                port['current_invest'][which_index] = port['current_invest'][which_index] + (port['quantity'][which_index] * port['live_price'][which_index])
+                port['quantity'][which_index] = 0
         which_index += 1
     return port
 
 
-# port = sell_stock(port)
+port = buy_stock(port) 
+port = sell_stock(port)
 
 print("\n\n This is the manipulated one: \n\n")
 print(port)
+
+# port.to_csv('tradingBot/test_stock.csv', index=False)
