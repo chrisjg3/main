@@ -36,17 +36,24 @@ def change_port(port):
             print("Must enter an integer.  It has been set to 1.")
             quantity = 1
             time.sleep(1)
+
+        # I find the index usin .index.item where the entered stock matches a row then...
+        # Make an equation to change the current_invest and quanitity.
+        # So that complicated equation below is really port['current_invest][row num] = port[current_invest now][index] - P * Q
+        # It is the same for the next equation with quanity AND the equations under sell.
         if buy_or_sell.lower() == "buy":
             print("...")
             time.sleep(1)
             port['current_invest'][port[port['stock'] == whichstock].index.item()] = port['current_invest'][port[port['stock'] == whichstock].index.item()] - (buyprice * quantity)
             port['quantity'][port[port['stock'] == whichstock].index.item()] = port['quantity'][port[port['stock'] == whichstock].index.item()] + quantity
             print("\nProcess Complete...\n")
+
         elif buy_or_sell.lower() == "sell":
             print("...")
             time.sleep(1)
             port['current_invest'][port[port['stock'] == whichstock].index.item()] = port['current_invest'][port[port['stock'] == whichstock].index.item()] + (buyprice * quantity)
             port['quantity'][port[port['stock'] == whichstock].index.item()] = port['quantity'][port[port['stock'] == whichstock].index.item()] - quantity
+        
         else:
             print("\nYou must enter buy or sell. Restarting section...")
 
