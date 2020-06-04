@@ -1,0 +1,14 @@
+To Do For Trade Bot:
+
+- Build bot.py to run with buy/sell func in seperate file
+
+- import update py instead of rewriting code
+
+- make code more "bad user" proof - aka make sure 'yes and no' areas reask if not yes or no, and other things along those lines. 
+
+- Break up bot settings functionality 
+
+- Make bot runnable from main file so can compete with bot
+
+
+Also: Add issue of not using Adj Close for the main.py paper trader
