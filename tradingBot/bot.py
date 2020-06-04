@@ -111,4 +111,4 @@ port = port.round(2)
 print('After bot editted Portfolio: ')
 print(port)
 
-port.to_csv('bot_stock.csv', index=False)
+port.to_csv('tradingBot/bot_stock.csv', index=False)
