@@ -9,6 +9,3 @@ To Do For Trade Bot:
 - Break up bot settings functionality 
 
 - Make bot runnable from main file so can compete with bot
-
-
-Also: Add issue of not using Adj Close for the main.py paper trader
