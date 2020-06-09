@@ -19,8 +19,9 @@ print("Stock Software - CJG")
 time.sleep(1)
 print("Current Portfolio: ")
 pd.options.mode.chained_assignment = None
+port = pd.read_csv('my_stock.csv')
 
-port = up.update_port()
+port = up.update_port(port)
 
 
 check_point = ""

@@ -7,6 +7,7 @@ import datetime as dt
 from datetime import date
 import time
 from yahoo_fin import stock_info as si
+from paperTrader import update_portfolio as up
 
 # ------------------------------------- Commands to Read Portfolio ---------------------------------
 
@@ -16,11 +17,10 @@ port = pd.read_csv('tradingBot/bot_stock.csv')
 wait_to_continue = ""
 pd.options.mode.chained_assignment = None
 
-# Setting 50ma and 100ma to 0 so the the 1st printed portfolio doesn't have misinformation.
+# Preparing for creating updated 50ma and 100ma variables
 port['50ma'] = 0
 port['100ma'] = 0
 
-# Preparing for creating updated 50ma and 100ma variables
 hundred_days = dt.timedelta(100)
 fifty_days = dt.timedelta(50)
 end = dt.datetime.now()
@@ -30,12 +30,12 @@ start = end - hundred_days
 # It is essentially the lower limit on the 'current_invest' column. 
 money_sunk = -10000.0  
 
-i = 0
-for each in port['stock']:
-    port['live_price'][i] = si.get_live_price(each)
-    i += 1
+
+# Updating the Portfolio
+port = up.update_port(port)
 
 
+print("\n\n")
 print("Current Portfolio with live_prices")
 print(port)      
 

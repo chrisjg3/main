@@ -1,5 +1,7 @@
 To Do For Trade Bot:
 
+-paperTrader not importing, not sure why
+
 - Build bot.py to run with buy/sell func in seperate file
 
 - import update py instead of rewriting code
@@ -9,3 +11,5 @@ To Do For Trade Bot:
 - Break up bot settings functionality 
 
 - Make bot runnable from main file so can compete with bot
+
+- Check if path to modules gets messed up if called from main.py (may need to change to absolute)
