@@ -1,14 +1,13 @@
 # CJG Projects ~ Trading Bot
 # Python 3
-
 import pandas as pd
 import pandas_datareader.data as web
 import datetime as dt
 from datetime import date
 import time
 from yahoo_fin import stock_info as si
-from paperTrader import update_portfolio as up
 
+from paperTrader import update_portfolio 
 # ------------------------------------- Commands to Read Portfolio ---------------------------------
 
 print("Algorithmic Trading Bot - CJG")
@@ -32,7 +31,8 @@ money_sunk = -10000.0
 
 
 # Updating the Portfolio
-port = up.update_port(port)
+print("\n\n")
+# port = up.update_port(port)
 
 
 print("\n\n")
